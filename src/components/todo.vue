@@ -4,7 +4,11 @@
         todo-input(
             @addTodo="addTodo"
         )
-        todo-list
+        todo-list(
+            :todos="todos"
+            @removeTodo="removeTodo"
+            @checkTodo="checkTodo"
+        )
 </template>
 
 
@@ -24,13 +28,18 @@ export default {
     methods: {
         addTodo(todo) {
             this.todos.push(todo);
+        },
+        removeTodo(todoId) {
+            this.todos = this.todos.filter(item => item.id !== todoId);
+        },
+        checkTodo(todo) {
+            this.todos = this.todos.map(item => item.id === todo.id ? todo : item);
         }
     }
-
-}
+};
 </script>
 
-<style lang="scss" src="styles/todo.scss">
+<style lang="scss" src="styles/todo.scss" scoped>
 
 </style>
 

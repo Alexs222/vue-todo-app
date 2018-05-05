@@ -33,7 +33,7 @@ export default {
 }
 </script>
 
-<style lang="scss" src="styles/todoInput.scss">
+<style lang="scss" src="styles/todoInput.scss" scoped>
 
 </style>
 
