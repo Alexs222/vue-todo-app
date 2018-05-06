@@ -17,13 +17,16 @@
 </template>
 
 <script>
+// import {eventBus} from '../main'
+
 export default {
     props: {
         todo: Object
     },
     methods: {
         removeTodo() {
-            this.$emit('removeTodo', this.todo.id)
+            // eventBus.$emit('removeTodo', this.todo.id)
+            this.$emit('removeTodo', this.todo.id);
         },
         checkTodo(e) {
             const todoItem = {

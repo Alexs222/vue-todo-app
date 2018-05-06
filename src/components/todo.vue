@@ -1,6 +1,6 @@
 <template lang="pug">
     .todo
-        pre {{todos}}
+        //- pre {{todos}}
         todo-input(
             @addTodo="addTodo"
         )
@@ -15,6 +15,8 @@
 <script>
 import todoInput from "./todoInput";
 import todoList from "./todoList";
+
+// import {eventBus} from "../main";
 
 export default {
     components: {
@@ -36,6 +38,11 @@ export default {
             this.todos = this.todos.map(item => item.id === todo.id ? todo : item);
         }
     }
+    // mounted() {
+    //     eventBus.$on('removeTodo', todoId => {
+    //         this.todos = this.todos.filter(item => item.id !== todoId);
+    //     })
+    // }
 };
 </script>
 
