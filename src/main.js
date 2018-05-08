@@ -6,4 +6,4 @@ new Vue({
   render: h => h(App)
 })
 
-// export const eventBus = new Vue;
+// export const EventBus = new Vue;

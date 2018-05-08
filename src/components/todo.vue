@@ -16,7 +16,7 @@
 import todoInput from "./todoInput";
 import todoList from "./todoList";
 
-// import {eventBus} from "../main";
+// import {eventBus} from "../main.js";
 
 export default {
     components: {
@@ -39,9 +39,9 @@ export default {
         }
     }
     // mounted() {
-    //     eventBus.$on('removeTodo', todoId => {
-    //         this.todos = this.todos.filter(item => item.id !== todoId);
-    //     })
+        // eventBus.$on('removeTodo', todoId => {
+            // this.todos = this.todos.filter(item => item.id !== todoId);
+        // })
     // }
 };
 </script>
